@@ -1,0 +1,17 @@
+# configs/rotvec.yaml — Lie algebra (axis-angle) actions
+action_repr: rotvec
+max_angle: 0.3141592653589793  # 0.1π
+threshold: 0.15
+max_steps: 100
+total_timesteps: 200000
+learning_rate: 0.001
+batch_size: 256
+buffer_size: 1000000
+gamma: 0.95
+n_sampled_goal: 4
+noise_sigma: 0.1
+net_arch: [256, 256, 256]
+seed: 42
+eval_freq: 5000
+n_eval_episodes: 50
+device: cpu
