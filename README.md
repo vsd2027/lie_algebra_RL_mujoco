@@ -38,11 +38,13 @@ Pure rotation control — no robot embodiment. The agent applies incremental rot
 
 ### Visualization
 
-![Visualization](results/visualization.png)
+![Visualization](results/visualization.gif)
 
 The MuJoCo viewer shows RGB axes at the EE: thick bright axes = goal orientation, thin faded axes = current orientation. As training progresses, the agent learns to align them.
 
 ## Discussion
+
+ Robotics manipulation and locomotion tasks which are trained on neural networks, generally don't have SO(3) spaces as output actions, they control joint angles or torque, thus we don't see much use case in this particular testing but on literature review, NNs used for pose detection or grasp detection would benefit from faster training times by lie algebra.
 
  The communities that genuinely need Lie groups for network outputs (SE(3) diffusion policies for grasp generation — SE(3)-DiffusionFields, EquiGraspFlow, ET-SEED, Diffusion-EDFs) already use Exp/Log maps as standard practice since 2023
 
